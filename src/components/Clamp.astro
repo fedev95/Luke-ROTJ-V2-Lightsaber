@@ -5,13 +5,79 @@
       <div class="clip bg-steel"></div>
     </div>
     <div class="details bg-steel">
-      <div class="hole bg-dark"></div>
-      <div class="hole bg-dark"></div>
+      <div class="row row-1">
+        <div class="space">
+          <div></div>
+        </div>
+        <div class="hole bg-dark"></div>
+        <div class="lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="row row-2">
+        <div class="space"></div>
+        <div class="hole bg-dark"></div>
+        <div class="lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <style>
+
+  .row {
+    display: flex;
+    gap: 6%;
+    height: 11.76%;
+    justify-content: space-between;
+    margin-top: 20%;
+    width: 100%;
+  }
+
+  .row-1 {
+    margin-top: 25%;
+  }
+
+  .row-2 {
+    margin-bottom: 25%;
+  }
+
+  .space {
+    position: relative;
+    width: 100%;
+
+    div {
+      background: var(--dark);
+      border-top-right-radius: 15%;
+      border-bottom-right-radius: 15%;
+      bottom: -50%;
+      height: 50%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
+      background: var(--dark);
+      height: 10%;
+      width: 100%;
+    }
+  }
+
   .clamp-container {
     display: flex;
     height: 18.15%;
@@ -38,15 +104,13 @@
   }
 
   .hole {
-    height: 11.76%;
-    margin: 20% 0;
-    width: 10%;
+    min-width: 10%;
     border-radius: 15%;
   }
 
   .control-box {
     background: rgb(181,181,181);
-    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(181,181,181,1) 58%, rgba(69,69,69,1) 100%);
+    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(181,181,181,1) 18%, rgba(227,226,226,1) 21%, rgba(210,210,210,1) 70%, rgba(59,55,53,1) 90%, rgba(32,27,25,1) 100%);
     display: flex;
     justify-content: start;
     left: -30%;
