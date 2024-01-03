@@ -1,0 +1,29 @@
+---
+import Booster from "./Booster.astro";
+import Clamp from "./Clamp.astro";
+import Emitter from "./Emitter.astro";
+import Grenade from "./Grenade.astro";
+import Neck from "./Neck.astro";
+import Pommel from "./Pommel.astro";
+---
+
+<button id="hilt-btn" class="hilt-container">
+  <Emitter></Emitter>
+  <Neck></Neck>
+  <Grenade></Grenade>
+  <Clamp></Clamp>
+  <Booster></Booster>
+  <Pommel></Pommel>
+</button>
+
+<style>
+  .hilt-container {
+    aspect-ratio: 53/281;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex-grow: 1;
+    outline: none;
+    position: relative;
+  }
+</style>

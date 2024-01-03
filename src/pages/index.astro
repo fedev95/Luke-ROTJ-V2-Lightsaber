@@ -1,0 +1,48 @@
+---
+import Blade from '../components/Blade.astro';
+import Footer from '../components/Footer.astro';
+import Hilt from '../components/Hilt.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Luke ROTJ V2 Lightsaber">
+	<main>
+    <!-- <div id="zoom-btn"></div> -->
+    <div id="lightsaber-container">
+      <Blade></Blade>
+      <Hilt></Hilt>
+    </div>
+	</main>
+  <Footer></Footer>
+</Layout>
+
+<style>
+  #zoom-btn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  #lightsaber-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  @media (min-width: 630px) {
+    #lightsaber-container {
+      height: 80vw;
+      rotate: 90deg;
+    }
+  }
+  
+</style>

@@ -1,0 +1,171 @@
+<div class="pommel-container">
+  <div class="pommel-1 bg-steel"></div>
+  <div class="pommel-2 bg-steel"></div>
+  <div class="pommel-3">
+    <div class="grip">
+      <div class="top-grip-skew grip-skew"></div>
+      <div class="bot-grip-skew grip-skew"></div>
+    </div>
+    <div class="inner-grips-container bg-steel">
+      <div class="inner-grip">
+        <div class="side-skews">
+          <div class="grip-skew inner-top-grip-skew"></div>
+          <div class="grip-skew inner-bot-grip-skew"></div>
+        </div>
+        <div class="top-skew"></div>
+        <div class="middle-square bg-steel"></div>
+        <div class="bot-skew">
+        </div>
+      </div>
+      <div class="inner-grip mirror-x">
+        <div class="side-skews">
+          <div class="grip-skew inner-top-grip-skew"></div>
+          <div class="grip-skew inner-bot-grip-skew"></div>
+        </div>
+        <div class="top-skew"></div>
+        <div class="middle-square bg-steel"></div>
+        <div class="bot-skew">
+        </div>
+      </div>
+    </div>
+    <div class="grip mirror-x">
+      <div class="top-grip-skew grip-skew"></div>
+      <div class="bot-grip-skew grip-skew"></div>
+    </div>
+  </div>
+  <div class="pommel-4 bg-steel"></div>
+</div>
+
+<style>
+  .pommel-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 13.17%;
+    width: 100%;
+  }
+
+  .pommel-1 {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 18.92%;
+    width: 66.04%;
+  }
+
+  .pommel-2 {
+    width: 67.92%;
+    height: 6.67%;
+  }
+
+  .pommel-3 {
+    
+    height: 54.05%;
+    position: relative;
+    width: 94.34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .pommel-4 {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    height: 21.62%;
+    width: 67.92%;
+  }
+
+  .grip {
+    background:rgb(219, 56, 219);
+    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 100%);
+    height: 65%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grip-skew {
+    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 100%);
+    height: 50%;
+    width: 100%;
+  }
+
+  .top-grip-skew {
+    transform: skewY(-35deg);
+    translate: 0 -25%;
+  }
+
+  .bot-grip-skew {
+    transform: skewY(35deg);
+    translate: 0 25%;
+  }
+
+  .inner-grips-container {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 12.5%;
+    height: 100%;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .inner-grip {
+    height: 100%;
+    position: relative;
+    width: 32.5%;
+  }
+
+  .middle-square {
+    height: 63.56%;
+    position: relative;
+    translate: -10%;
+    width: 76.92%;
+  }
+
+  .side-skews {
+    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 100%);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .inner-top-grip-skew {
+    position: relative;
+    transform: skewY(-40deg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    translate: 0 20%;
+    z-index: 1;
+  }
+
+  .inner-bot-grip-skew {
+    transform: skewY(40deg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    translate: 0 -20%;
+    z-index: 1;
+  }
+
+  .top-skew {
+    background: linear-gradient(180deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 100%);
+    height: 18.22%;
+    transform: skew(-15deg);
+    translate: -4.5%;
+    width: 100%;
+  }
+
+  .bot-skew {
+    background: linear-gradient(180deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 100%);
+    height: 18.22%;
+    transform: skew(15deg);
+    translate: -4.5%;
+    width: 100%;
+  }
+
+</style>

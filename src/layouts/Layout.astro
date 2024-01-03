@@ -1,0 +1,189 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <div id="zoom-btn"></div>
+		<slot />
+	</body>
+</html>
+<style is:global>  
+	* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --steel: linear-gradient(90deg, rgba(69,69,69,1) 0%, rgba(176,176,176,1) 12%, rgba(163,163,163,1) 23%, rgba(120,120,120,1) 33%, rgba(120,120,120,1) 35%, rgba(181,181,181,1) 51%, rgba(251,251,251,1) 77%, rgba(181,181,181,1) 88%, rgba(69,69,69,1) 100%);
+    --dark: #201b19;
+    --dark-gradient: linear-gradient(90deg, rgba(32,27,25,1) 0%, rgba(32,27,25,1) 30%, rgba(79,67,67,1) 57%, rgba(32,27,25,1) 80%, rgba(32,27,25,1) 100%);
+  }
+
+  body {
+    background: lightblue;
+    transition-duration: 0.3s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #zoom-btn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 100%);
+  }
+
+  .mirror-x {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+
+  .mirror-y {
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+  }
+
+  .bg-steel {
+    background: var(--steel);
+  }
+
+  .bg-dark {
+    background: var(--dark);
+  }
+
+  .bg-dark-gradient {
+    background: var(--dark-gradient);
+  }
+
+  .img-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mix-1 {
+    background-image: url(public/textures/mix-texture-1.svg);
+  }
+
+  .teeth-2 {
+    background-image: url(public/textures/teeth-texture-2.svg);
+  }
+
+  .waves {
+    background-image: url(public/textures/wave-1.svg);
+  }
+
+  .waves-2 {
+    background-image: url(public/textures/wave-2.svg);
+  }
+
+</style>
+
+<script>
+
+  let lightsaberOn: boolean = false;
+  let zoom: boolean = true;
+  const hum = new Audio('public/soundfont/hum.wav');
+  const powerOn = new Audio('public/soundfont/poweron.wav');
+  const powerOff = new Audio('public/soundfont/poweroff.wav');
+  const zoomBtn = document.getElementById("zoom-btn");
+  const hilt = document.getElementById("hilt-btn");
+  const bladeContainer = document.getElementById("blade-container");
+  const blade = document.getElementById("blade");
+
+  hum.volume = 0.5;
+  powerOn.volume = 0.5;
+  powerOff.volume = 0.5;
+
+  zoomBtn!.addEventListener('click', handleZoom);
+
+  hilt?.addEventListener("click", handleBlade);
+
+  function handleBlade() {
+    if (!zoom) {
+      if (lightsaberOn) {
+        powerOffSound();
+        powerOffBlade();
+        lightsaberOn = false;
+      } else {
+        powerOnSound();
+        powerOnBlade();
+        lightsaberOn = true;
+      }
+    } else {
+      zoomOut();
+    }
+  }
+
+  function handleZoom() {
+    if (!lightsaberOn) {
+      if (zoom) {
+        zoomOut();
+      } else {
+        zoomIn();
+      }
+    }
+  }
+
+  function zoomIn() {
+    zoom = true;
+    bladeContainer!.style.height = "0";
+  }
+
+  function zoomOut() {
+    zoom = false;
+    bladeContainer!.style.height = "75%";
+  }
+
+  function powerOffSound() {
+    powerOff.play();
+    hum.pause();
+    hum.currentTime = 0;
+    powerOn.pause();
+    powerOn.currentTime = 0;
+  }
+
+  function powerOnSound() {
+    hum.play();
+    powerOn.play();
+    hum.addEventListener('timeupdate', () => {
+      const buffer = 0.7;
+      if (hum.currentTime > hum.duration - buffer) {
+        hum.currentTime = 0;
+        if (lightsaberOn) {
+          hum.play();
+        }
+      }
+    });
+  }
+
+  function powerOffBlade() {
+    blade!.style.height = "0%";
+    blade!.style.visibility = "hidden";
+    document.body.style.background = "lightblue"
+  }
+
+  function powerOnBlade() {
+    blade!.style.visibility = "visible";
+    blade!.style.height = "100%";
+    document.body.style.background = "lightgreen"
+  }
+</script>

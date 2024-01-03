@@ -1,0 +1,109 @@
+---
+import DarkGrenade from "./DarkGrenade.astro";
+---
+
+<div class="grenade-container">
+  <div class="grenade bg-dark-gradient grenade-top grenade-5">
+    <div class="grenade-top-l bg-dark"></div>
+    <div class="grenade-top-r bg-dark"></div>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-3"></div>
+  <div class="grenade grenade-5">
+    <DarkGrenade></DarkGrenade>
+  </div>
+  <div class="grenade bg-steel grenade-6">
+    <div class="img-bg waves">
+      <div class="img-bg teeth-2"></div>
+    </div>
+  </div>
+  <div class="grenade bg-steel grenade-base grenade-4"></div>
+</div>
+
+<style>
+  .grenade-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 30.96%;
+    width: 100%;
+  }
+  
+  .grenade {
+    width: 67.92%;
+  }
+
+  .grenade-top {
+    display: flex;
+    justify-content: space-between;
+    width: 54.5%;
+  }
+
+  .grenade-top-l {
+    height: 100%;
+    transform: skew(-35deg);
+    translate: -40%;
+    width: 15%;
+  }
+  
+  .grenade-top-r {
+    height: 100%;
+    transform: skew(35deg);
+    translate: 40%;
+    width: 15%;
+  }
+
+  .grenade-3 {
+    height: 3.45%;
+  }
+
+  .grenade-4 {
+    height: 4.6%;
+  }
+  
+  .grenade-5 {
+    height: 5.75%;
+  }
+
+  .grenade-6 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 6.9%;
+  }
+
+  .grenade-base {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    outline:  1px solid rgba(0, 0, 0, 0.3);
+    width: 71.7%;
+  }
+</style>

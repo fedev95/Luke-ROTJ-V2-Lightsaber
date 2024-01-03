@@ -1,0 +1,39 @@
+<div id="blade-container">
+  <div id="blade"></div>
+</div>
+
+<style>
+  #blade-container {
+    align-items: end;
+    aspect-ratio: 1/36;
+    display: flex;
+    height: 0%;
+    transition-duration: 0.5s;
+  }
+
+  #blade {
+    animation: 1.5s linear infinite pulse;
+    border-top-left-radius: 99999999px;
+    border-top-right-radius: 99999999px;
+    height: 0%;
+    transition-duration: 0.3s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: rgb(203, 255, 196);
+      box-shadow: 0px 0px 60px 25px rgb(98, 255, 84);
+    }
+    50% {
+      background-color: rgb(164, 255, 152);
+      box-shadow: 0px 0px 45px 12px rgb(98, 255, 84);
+    }
+    100% {
+      background-color: rgb(203, 255, 196);
+      box-shadow: 0px 0px 60px 25px rgb(98, 255, 84);
+    }
+  }
+</style>
