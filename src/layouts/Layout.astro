@@ -79,20 +79,20 @@ const { title } = Astro.props;
     width: 100%;
   }
 
-  .mix-1 {
-    background-image: url(public/textures/mix-texture-1.svg);
+  .mix-texture {
+    background-image: url(mix-texture.svg);
   }
 
-  .teeth-2 {
-    background-image: url(public/textures/teeth-texture-2.svg);
+  .teeth-texture {
+    background-image: url(teeth-texture.svg);
   }
 
-  .waves {
-    background-image: url(public/textures/wave-1.svg);
+  .waves-1 {
+    background-image: url(waves-1.svg);
   }
 
   .waves-2 {
-    background-image: url(public/textures/wave-2.svg);
+    background-image: url(waves-2.svg);
   }
 
 </style>
@@ -101,9 +101,9 @@ const { title } = Astro.props;
 
   let lightsaberOn: boolean = false;
   let zoom: boolean = true;
-  const hum = new Audio('public/soundfont/hum.wav');
-  const powerOn = new Audio('public/soundfont/poweron.wav');
-  const powerOff = new Audio('public/soundfont/poweroff.wav');
+  const hum = new Audio('hum.wav');
+  const powerOn = new Audio('poweron.wav');
+  const powerOff = new Audio('poweroff.wav');
   const zoomBtn = document.getElementById("zoom-btn");
   const hilt = document.getElementById("hilt-btn");
   const bladeContainer = document.getElementById("blade-container");
