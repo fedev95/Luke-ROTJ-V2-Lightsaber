@@ -98,22 +98,24 @@ const { title } = Astro.props;
 </style>
 
 <script>
-
-  let lightsaberOn: boolean = false;
-  let zoom: boolean = true;
   const hum = new Audio('hum.wav');
+  const swing1 = new Audio('swing-1.wav');
+  const swing2 = new Audio('swing-2.wav');
   const powerOn = new Audio('poweron.wav');
   const powerOff = new Audio('poweroff.wav');
   const zoomBtn = document.getElementById("zoom-btn");
   const hilt = document.getElementById("hilt-btn");
   const blade = document.getElementById("blade");
+  let lightsaberOn: boolean = false;
+  let zoom: boolean = true;
 
   hum.volume = 0.5;
+  swing1.volume = 0.5;
+  swing2.volume = 0.5;
   powerOn.volume = 0.5;
   powerOff.volume = 0.5;
 
   zoomBtn!.addEventListener('click', handleZoom);
-
   hilt?.addEventListener("click", handleBlade);
 
   function handleBlade() {
@@ -139,11 +141,17 @@ const { title } = Astro.props;
   function zoomIn() {
     zoom = true;
     hilt!.style.height = "100%";
+    if (lightsaberOn) {
+      swing2.play();
+    }
   }
 
   function zoomOut() {
     zoom = false;
     hilt!.style.height = "25%";
+     if (lightsaberOn) {
+      swing1.play();
+    }
   }
 
   function powerOffSound() {
@@ -171,12 +179,12 @@ const { title } = Astro.props;
   function powerOffBlade() {
     blade!.style.height = "0%";
     blade!.style.visibility = "hidden";
-    document.body.style.background = "lightblue"
+    document.body.style.background = "lightblue";
   }
 
   function powerOnBlade() {
     blade!.style.visibility = "visible";
     blade!.style.height = "100%";
-    document.body.style.background = "lightgreen"
+    document.body.style.background = "lightgreen";
   }
 </script>
