@@ -1,5 +1,7 @@
 ---
 import DarkGrenade from "./DarkGrenade.astro";
+
+const grips: string[] = ['', '', '', '', '', '', '', '', ''];
 ---
 
 <div class="grenade-container">
@@ -7,48 +9,22 @@ import DarkGrenade from "./DarkGrenade.astro";
     <div class="grenade-top-l bg-dark"></div>
     <div class="grenade-top-r bg-dark"></div>
   </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
-  <div class="grenade bg-steel grenade-3"></div>
-  <div class="grenade grenade-5">
-    <DarkGrenade></DarkGrenade>
-  </div>
+  {
+    grips.map((grip) => (
+      <div class="grenade bg-steel grenade-3"></div>
+      <div class="grenade grenade-5">
+        <DarkGrenade></DarkGrenade>
+      </div>
+    ))
+  }
   <div class="grenade bg-steel grenade-6">
     <div class="img-bg waves-1">
       <div class="img-bg teeth-texture"></div>
     </div>
   </div>
-  <div class="grenade bg-steel grenade-base grenade-4"></div>
+  <div class="grenade bg-steel grenade-base grenade-4">
+    <div></div>
+  </div>
 </div>
 
 <style>
@@ -97,13 +73,18 @@ import DarkGrenade from "./DarkGrenade.astro";
   }
 
   .grenade-6 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     height: 6.9%;
   }
 
   .grenade-base {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    outline:  1px solid rgba(0, 0, 0, 0.3);
+    align-items: end;
+    display: flex;
     width: 71.7%;
+
+    div {
+      background-color: rgb(116, 116, 116);
+      height: 1px;
+      width: 100%;
+    }
   }
 </style>
