@@ -8,7 +8,8 @@ import Neck from "./Neck.astro";
 import Pommel from "./Pommel.astro";
 ---
 
-<button id="hilt-btn" class="hilt-container">
+<div id="hilt-container" class="hilt-container">
+  <button id="power-btn"></button>
   <Blade></Blade>
   <Emitter></Emitter>
   <Neck></Neck>
@@ -16,16 +17,24 @@ import Pommel from "./Pommel.astro";
   <Clamp></Clamp>
   <Booster></Booster>
   <Pommel></Pommel>
-</button>
+</div>
 
 <style>
-  .hilt-container {
-    aspect-ratio: 53/281;
+  #power-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     height: 100%;
     outline: none;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .hilt-container {
+    aspect-ratio: 53/281;
+    background-color: transparent;
+    height: 100%;
     position: relative;
     transition-duration: 0.5s;
   }
