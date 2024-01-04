@@ -106,7 +106,6 @@ const { title } = Astro.props;
   const powerOff = new Audio('poweroff.wav');
   const zoomBtn = document.getElementById("zoom-btn");
   const hilt = document.getElementById("hilt-btn");
-  const bladeContainer = document.getElementById("blade-container");
   const blade = document.getElementById("blade");
 
   hum.volume = 0.5;
@@ -118,39 +117,33 @@ const { title } = Astro.props;
   hilt?.addEventListener("click", handleBlade);
 
   function handleBlade() {
-    if (!zoom) {
-      if (lightsaberOn) {
-        powerOffSound();
-        powerOffBlade();
-        lightsaberOn = false;
-      } else {
-        powerOnSound();
-        powerOnBlade();
-        lightsaberOn = true;
-      }
+    if (lightsaberOn) {
+      powerOffSound();
+      powerOffBlade();
+      lightsaberOn = false;
     } else {
-      zoomOut();
+      powerOnSound();
+      powerOnBlade();
+      lightsaberOn = true;
     }
   }
 
   function handleZoom() {
-    if (!lightsaberOn) {
-      if (zoom) {
-        zoomOut();
-      } else {
-        zoomIn();
-      }
+    if (zoom) {
+      zoomOut();
+    } else {
+      zoomIn();
     }
   }
 
   function zoomIn() {
     zoom = true;
-    bladeContainer!.style.height = "0";
+    hilt!.style.height = "100%";
   }
 
   function zoomOut() {
     zoom = false;
-    bladeContainer!.style.height = "75%";
+    hilt!.style.height = "25%";
   }
 
   function powerOffSound() {

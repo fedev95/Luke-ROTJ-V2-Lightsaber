@@ -1,5 +1,4 @@
 ---
-import Blade from '../components/Blade.astro';
 import Footer from '../components/Footer.astro';
 import Hilt from '../components/Hilt.astro';
 import Layout from '../layouts/Layout.astro';
@@ -8,7 +7,6 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Luke ROTJ V2 Lightsaber">
 	<main>
     <div id="lightsaber-container">
-      <Blade></Blade>
       <Hilt></Hilt>
     </div>
 	</main>
@@ -18,16 +16,16 @@ import Layout from '../layouts/Layout.astro';
 <style>
   #lightsaber-container {
     display: flex;
-    align-items: center;
+    justify-content: end;
     flex-direction: column;
     height: 75vh;
   }
 
   main {
+    align-items: center;
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
   }
 
@@ -37,5 +35,4 @@ import Layout from '../layouts/Layout.astro';
       rotate: 90deg;
     }
   }
-  
 </style>

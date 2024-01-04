@@ -1,4 +1,5 @@
 ---
+import Blade from "./Blade.astro";
 import Booster from "./Booster.astro";
 import Clamp from "./Clamp.astro";
 import Emitter from "./Emitter.astro";
@@ -8,6 +9,7 @@ import Pommel from "./Pommel.astro";
 ---
 
 <button id="hilt-btn" class="hilt-container">
+  <Blade></Blade>
   <Emitter></Emitter>
   <Neck></Neck>
   <Grenade></Grenade>
@@ -22,8 +24,9 @@ import Pommel from "./Pommel.astro";
     background-color: transparent;
     border: none;
     cursor: pointer;
-    flex-grow: 1;
+    height: 100%;
     outline: none;
     position: relative;
+    transition-duration: 0.5s;
   }
 </style>
