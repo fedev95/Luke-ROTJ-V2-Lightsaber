@@ -17,6 +17,9 @@
           <div></div>
         </div>
       </div>
+      <div class="graflex">
+        <div></div>
+      </div>
       <div class="row row-2">
         <div class="space"></div>
         <div class="hole bg-dark"></div>
@@ -32,13 +35,31 @@
 </div>
 
 <style>
+  .graflex {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: end;
+    width: 100%;
+
+    div {
+      background-image: url(/graflex.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 30%;    
+      opacity: 40%;
+      overflow: hidden;
+      width: 45%;
+    }
+  }
 
   .row {
     display: flex;
     gap: 6%;
-    height: 11.76%;
     justify-content: space-between;
     margin-top: 20%;
+    min-height: 11.76%;
     width: 100%;
   }
 
@@ -48,6 +69,7 @@
 
   .row-2 {
     margin-bottom: 25%;
+    margin-top: 0;
   }
 
   .space {
