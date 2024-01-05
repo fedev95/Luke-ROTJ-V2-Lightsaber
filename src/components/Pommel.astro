@@ -7,6 +7,7 @@
       <div class="bot-grip-skew grip-skew bg-grip"></div>
     </div>
     <div class="inner-grips-container bg-steel">
+      <div class="pommel-tint"></div>
       <div class="inner-grip">
         <div class="side-skews">
           <div class="grip-skew inner-top-grip-skew bg-grip"></div>
@@ -60,7 +61,6 @@
     width: 94.34%;
     display: flex;
     align-items: center;
-
   }
 
   .pommel-4 {
@@ -93,12 +93,19 @@
   }
 
   .inner-grips-container {
-    outline: 1px solid rgb(116, 116, 116);
     display: flex;
     gap: 12.5%;
     height: 100%;
     justify-content: center;
+    position: relative;
     width: 80%;
+  }
+
+  .pommel-tint {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 
   .inner-grip {

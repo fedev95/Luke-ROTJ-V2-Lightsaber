@@ -1,9 +1,8 @@
 <footer>
   <div class="guide">
-    <p>Click the hilt to turn on / off</p>
-    <p>Mouse wheel for zoom</p>
+    <p>Click the hilt to turn on / off.</p>
+    <p>Mouse wheel for zoom.</p>
   </div>
-  <div class="bar"></div>
   <div class="rrss">
     <a href="https://github.com/fedev95" target="_blank"><i class="bi bi-github"></i> fedev</a>
   </div>
@@ -13,67 +12,37 @@
   @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 
   footer {
+    align-items: center;
     color: aliceblue;
     display: flex;
+    flex-direction: column;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    gap: 15px;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    font-size: small;
+    gap: 5px;
+    padding-bottom: 10px;
     position: relative;
-    width: 100%;
   }
 
   .guide {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-
-    p {
-      text-align: end;
-    }
-  }
-
-  .bar {
-    background-color: aliceblue;
-    display: flex;
-    padding-left: 2px;
+    gap: 20px;
   }
 
   .rrss {
     align-items: center;
     display: flex;
-    width: 100%;
 
     a {
       color: aliceblue;
       display: flex;
+      font-size: medium;
       gap: 5px;
+      padding: .5rem;
       text-decoration: none;
     }
 
     a:hover {
-      scale: 1.15;
-    }
-  }
-
-  @media (max-width: 850px) {
-    footer {
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .guide p {
-      text-align: center;
-    }
-
-    .bar {
-      padding-top: 2px;
-      width: 100px;
-    }
-
-    .rrss {
-      justify-content: center;
+      scale: 1.2;
     }
   }
 </style>

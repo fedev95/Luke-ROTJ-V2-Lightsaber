@@ -1,17 +1,15 @@
-# Luke ROTJ V2 Lightsaber
+# Luke ROTJ V2 Lightsaber - [Live site](https://luke-rotj-v2-lightsaber.netlify.app)
 
-### [Live site](https://luke-rotj-v2-lightsaber.netlify.app)
+## Built with Astro
 
-![](/readme-images/screenshot.png)
+The hilt was built from scratch using lots of divs, a few lines of CSS and some SVGs for the dark spots.
 
-### Built with Astro
-
-#### The hilt was built from scratch using lots of divs, a few lines of CSS and some SVGs for the dark spots.
+![](/images/screenshot.png)
 
 ### All dimensions were taken from the design below.
 
-![](/readme-images/design.jpg)
+![](/images/design.jpg)
 
 ### Reference
 
-![](/readme-images/luke-v2.jpg)
+![](/images/luke-v2.jpg)
