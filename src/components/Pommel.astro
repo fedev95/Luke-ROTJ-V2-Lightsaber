@@ -2,7 +2,7 @@
   <div class="pommel-1 bg-steel"></div>
   <div class="pommel-2 bg-steel"></div>
   <div class="pommel-3">
-    <div class="grip bg-grip bg-grip">
+    <div class="outer-grip bg-grip">
       <div class="top-grip-skew grip-skew bg-grip"></div>
       <div class="bot-grip-skew grip-skew bg-grip"></div>
     </div>
@@ -13,21 +13,21 @@
           <div class="grip-skew inner-top-grip-skew bg-grip"></div>
           <div class="grip-skew inner-bot-grip-skew bg-grip"></div>
         </div>
-        <div class="top-skew bg-grip"></div>
-        <div class="middle-square bg-steel mirror-x"></div>
-        <div class="bot-skew bg-grip"></div>
+        <div class="top-skew"></div>
+        <div class="middle-square mirror-x"></div>
+        <div class="bot-skew"></div>
       </div>
       <div class="inner-grip mirror-x">
         <div class="side-skews">
           <div class="grip-skew inner-top-grip-skew bg-grip"></div>
           <div class="grip-skew inner-bot-grip-skew bg-grip"></div>
         </div>
-        <div class="top-skew bg-grip"></div>
-        <div class="middle-square bg-steel"></div>
-        <div class="bot-skew bg-grip"></div>
+        <div class="top-skew"></div>
+        <div class="middle-square mirror-x"></div>
+        <div class="bot-skew"></div>
       </div>
     </div>
-    <div class="grip mirror-x bg-grip">
+    <div class="outer-grip bg-grip mirror-x">
       <div class="top-grip-skew grip-skew bg-grip"></div>
       <div class="bot-grip-skew grip-skew bg-grip"></div>
     </div>
@@ -68,7 +68,7 @@
     width: 67.92%;
   }
 
-  .grip {
+  .outer-grip {
     height: 65%;
     width: 10%;
   }
@@ -102,10 +102,10 @@
   }
 
   .pommel-tint {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
     height: 100%;
-    width: 100%;
     position: absolute;
+    width: 100%;
   }
 
   .inner-grip {
@@ -114,6 +114,7 @@
   }
 
   .middle-square {
+    background: linear-gradient(90deg, rgb(126, 126, 126) 0%, rgb(189, 189, 189) 40%, rgb(61, 61, 61) 100%);
     height: 63.56%;
     translate: -10%;
     width: 76.92%;
@@ -129,9 +130,9 @@
   }
 
   .inner-top-grip-skew {
-    transform: skewY(-40deg);
     height: 100%;
     position: relative;
+    transform: skewY(-40deg);
     translate: 0 20%;
     z-index: 1;
   }
@@ -144,12 +145,14 @@
   }
 
   .top-skew {
+    background: linear-gradient(-45deg, rgba(181,181,181,1) 0%, rgba(69,69,69,1) 80%);
     height: 18.22%;
     transform: skew(-15deg);
     translate: -4.5%;
   }
 
   .bot-skew {
+    background: linear-gradient(-135deg, rgb(141, 141, 141) 0%, rgb(43, 43, 43) 80%);
     height: 18.22%;
     transform: skew(15deg);
     translate: -4.5%;

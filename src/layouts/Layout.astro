@@ -39,9 +39,9 @@ const { title } = Astro.props;
   }
 
   :root {
-    --steel: linear-gradient(90deg, rgba(69,69,69,1) 0%, rgba(176,176,176,1) 12%, rgba(163,163,163,1) 23%, rgba(120,120,120,1) 33%, rgba(120,120,120,1) 35%, rgba(181,181,181,1) 51%, rgba(251,251,251,1) 77%, rgba(181,181,181,1) 88%, rgba(69,69,69,1) 100%);
-    --dark: rgba(32,27,25,1);
-    --dark-gradient: linear-gradient(90deg, rgba(32,27,25,1) 0%, rgba(32,27,25,1) 30%, rgba(79,67,67,1) 57%, rgba(32,27,25,1) 80%, rgba(32,27,25,1) 100%);
+    --steel: linear-gradient(90deg, rgb(128, 128, 128) 0%, rgba(66,66,66) 14%, rgba(70,70,70) 26%, rgba(74,74,74) 35%, rgba(112,112,112) 57%, rgba(230,230,230) 79%, rgba(118,118,119) 87%, rgba(61,61,61) 100%);
+    --dark : rgb(22, 13, 13);
+    --dark-gradient: linear-gradient(90deg, rgb(22, 13, 13) 0%, rgb(26, 22, 20) 30%, rgb(46, 42, 42) 57%, rgb(26, 22, 20) 80%, rgb(22, 13, 13) 100%);
   }
 
   body {
@@ -57,16 +57,6 @@ const { title } = Astro.props;
     height: 100%;
     width: 100%;
     background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 100%);
-  }
-
-  .mirror-x {
-    transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-  }
-
-  .mirror-y {
-    transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
   }
 
   .bg-steel {
@@ -89,6 +79,16 @@ const { title } = Astro.props;
     width: 100%;
   }
 
+  .mirror-x {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+
+  .mirror-y {
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+  }
+
   .mix-texture {
     background-image: url(mix-texture.svg);
   }
@@ -104,5 +104,4 @@ const { title } = Astro.props;
   .waves-2 {
     background-image: url(waves-2.svg);
   }
-
 </style>

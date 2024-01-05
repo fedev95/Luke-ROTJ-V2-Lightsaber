@@ -1,10 +1,12 @@
 <div class="clamp-container">
   <div class="clamp">
-    <div class="control-box bg-steel">
-      <div class="control-box-edge bg-steel mirror-x"></div>
-      <div class="clip bg-steel"></div>
+    <div class="control-box">
+      <div class="control-box-edge"></div>
+      <div class="clip">
+        <div></div>
+      </div>
     </div>
-    <div class="details bg-steel">
+    <div class="details">
       <div class="row row-1">
         <div class="space">
           <div class="bg-dark"></div>
@@ -116,6 +118,7 @@
 
   .details {
     align-items: center;
+    background: linear-gradient(90deg, rgba(22, 13, 13, 1) 0%, rgba(66,66,66,1) 19%, rgba(70,70,70,1) 26%, rgba(74,74,74,1) 35%, rgba(112,112,112,1) 57%, rgba(230,230,230,1) 79%, rgba(118,118,119,1) 87%, rgba(61,61,61,1) 100%);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -129,25 +132,34 @@
   }
 
   .control-box {
-    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(181,181,181,1) 18%, rgba(227,226,226,1) 21%, rgba(210,210,210,1) 70%, rgba(59,55,53,1) 90%, rgba(32,27,25,1) 100%);
+    background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 30%, rgba(112,112,112,1) 70%, rgba(112,112,112,1) 85%, rgb(20, 20, 20) 100%);
     display: flex;
-    justify-content: start;
-    left: -30%;
     height: 100%;
+    left: -30%;
     position: absolute;
     width: 30%;
   }
 
   .control-box-edge {
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(112,112,112,1) 15%, rgba(112,112,112,1) 85%, rgb(20, 20, 20) 100%);
     height: 100%;
     width: 33%;
   }
 
   .clip {
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(112,112,112,1) 15%, rgba(112,112,112,1) 85%, rgb(20, 20, 20) 100%);
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
     height: 80%;
+    overflow: hidden;
     translate: 0 55%;
     width: 50%;
+
+    div {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 75%, rgb(0, 0, 0, 0) 100%);
+      height: 100%;
+      width: 100%;
+    }
+
   }
 </style>
