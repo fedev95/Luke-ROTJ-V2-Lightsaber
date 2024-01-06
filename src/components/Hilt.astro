@@ -9,14 +9,16 @@ import Pommel from "./Pommel.astro";
 ---
 
 <div id="hilt-container" class="hilt-container">
-  <button id="power-btn" autofocus></button>
-  <Blade></Blade>
-  <Emitter></Emitter>
-  <Neck></Neck>
-  <Grenade></Grenade>
-  <Clamp></Clamp>
-  <Booster></Booster>
-  <Pommel></Pommel>
+  <div class="aux">
+    <button id="power-btn" autofocus></button>
+    <Blade></Blade>
+    <Emitter></Emitter>
+    <Neck></Neck>
+    <Grenade></Grenade>
+    <Clamp></Clamp>
+    <Booster></Booster>
+    <Pommel></Pommel>
+  </div>
 </div>
 
 <style>
@@ -32,10 +34,18 @@ import Pommel from "./Pommel.astro";
   }
 
   .hilt-container {
-    aspect-ratio: 53/281;
-    background-color: transparent;
+    align-items: center;
+    display: flex;
     height: 100%;
     position: relative;
     transition-duration: 0.5s;
+  }
+
+  .aux {
+    aspect-ratio: 53/281;
+    height: 100%;
+    max-height: 27.5cm;
+    position: relative;
+    width: 100%;
   }
 </style>
